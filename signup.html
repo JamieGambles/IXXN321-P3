@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Login/Signup</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="home_button button">
+            <span class="material-icons-outlined button_icon md-36">view_list</span>
+            <span class="button_text">My Shopping List</span>
+        </a>
+        <nav>
+            <a href="index.html" class="nav_button button"><span class="button_text">List</span></a>
+            <a href="#" class="nav_button button"><span class="button_text">About</span></a>
+            <a href="signup.html" class="nav_button nav_button_active button"><span class="button_text">Log in/Sign up</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="inner_nav inner_nav_signup inner_nav_signup_active" id="inner_nav_loginSignup">
+            <button class="button"><span class="button_text">Log in/Sign up:</span></button>
+        </div>
+        <div class="inner_nav inner_nav_signup" id="inner_nav_createAccount">
+            <button onclick="show_cards_wrapper()" class="button"><span class="button_text">Log in/Signup</span></button>
+            <span class="material-icons-outlined button_icon inner_nav_divider">chevron_right</span>
+            <button class="button"><span class="button_text" id="product_name_nav">Create account:</span></button>
+        </div>
+        <div class="inner_nav inner_nav_signup" id="inner_nav_email">
+            <button onclick="show_cards_wrapper()" class="button"><span class="button_text">Log in/Signup</span></button>
+            <span class="material-icons-outlined button_icon inner_nav_divider">chevron_right</span>
+            <button class="button"><span class="button_text" id="product_name_nav">Enter email:</span></button>
+        </div>
+        <div class="inner_nav inner_nav_signup" id="inner_nav_password">
+            <button onclick="show_cards_wrapper()" class="button"><span class="button_text">Log in/Signup</span></button>
+            <span class="material-icons-outlined button_icon inner_nav_divider">chevron_right</span>
+            <button onclick="show_existingaccount()" class="button"><span class="button_text" id="product_name_nav">Enter email</span></button>
+            <span class="material-icons-outlined button_icon inner_nav_divider">chevron_right</span>
+            <button class="button"><span class="button_text" id="product_name_nav">Enter password:</span></button>
+        </div>
+        <section class="existingaccount" id="cards_wrapper">
+            <div class="login_cards_wrapper">
+                <button type="submit" class="login_button button" onclick="show_createaccount()">
+                    <span class="button_text">I am a new user</span>
+                </button>
+                <button type="submit" class="login_button button" onclick="show_existingaccount()">
+                    <span class="button_text">I have an existing account</span>
+                </button>
+            </div>
+        </section>
+        <section class="existingaccount" id="createaccount_wrapper">
+            <div class="all_stores">
+                <div class="input_wrapper emailPhoneNumber">
+                    <input type="text" placeholder="Email or phone number">
+                </div>
+                <div class="input_wrapper password">
+                    <input type="text" placeholder="Password">
+                </div>
+                <div class="input_wrapper confirmPassword">
+                    <input type="text" placeholder="Confirm password"> 
+                </div>
+                <a href="accountMade.html" class="create_button button">
+                <span class="button_text">Create account</span>
+                </a>
+            </div>
+        </section>
+        <section class="existingaccount" id="existingaccount_wrapper">
+            <div class="all_stores">
+                <div class="input_wrapper emailPhoneNumber">
+                    <input type="text" placeholder="Email or phone number">
+                </div>
+                <button type="submit" class="create_button button" onclick="show_password()">
+                    <span class="button_text">Next</span>
+                    </button>
+                <button type="submit" class="forgot_button button" onclick="show_()">
+                    <span class="button_text" >Forgot email?</span>
+                    </button>
+            </div>
+        </section>
+        <section class="existingaccount" id="password_wrapper">
+            <div class="all_stores">
+                <div class="input_wrapper existingPassword">
+                    <input type="text" placeholder="Password">
+                </div>
+                <a href="checkout.html" class="create_button button" onclick="show_accountmade()">
+                    <span class="button_text">Sign in</span>
+                </a>
+                <button type="submit" class="forgot_button button" onclick="show_password()">
+                    <span class="button_text">Forgot password?</span>
+                    </button>
+            </div>
+        </section>
+    </main>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
